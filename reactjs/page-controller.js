@@ -13,11 +13,11 @@
         pageInfoVm.receiver = {};
         pageInfoVm.paymentDetails = {};
 
-        function prependZero(numberCode){
-            if(numberCode && numberCode.length == 1){
-                return  "0"+numberCode;
+        function appendZeroToNumber(countryCode){
+            if(countryCode && countryCode.length == 1){
+                return  "0"+countryCode;
             }else{
-                return numberCode;
+                return countryCode;
             }
         }
 
@@ -26,7 +26,7 @@
         }
 
 
-        function setDate() {
+        function setReceiptDate() {
             var date = new Date();
             var currentDate = date.getDate();
             var dayStr = '';
